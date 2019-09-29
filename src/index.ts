@@ -49,7 +49,6 @@ program
 
 program
   .command('wait [account]')
-  .alias('dn')
   .description('download files from the specified account')
   .option('--save', 'Store cursor before exit')
   .action((account: string, cmdObj: any) => {
