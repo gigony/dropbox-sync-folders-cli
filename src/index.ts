@@ -37,7 +37,7 @@ program
         account = account || '*';
         await dropboxSync.downloadFiles(account);
         if (cmdObj.save) {
-          fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+          fs.writeFileSync(configPath, JSON.stringify(config.default, null, 2));
         }
         process.exit(0);
       })
@@ -63,7 +63,7 @@ program
         account = account || '*';
         await dropboxSync.waitChanges(account);
         if (cmdObj.save) {
-          fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+          fs.writeFileSync(configPath, JSON.stringify(config.default, null, 2));
         }
         process.exit(0);
       })
