@@ -1,0 +1,67 @@
+{
+  "name": "dropbox-sync-folders-cli",
+  "version": "0.1.0",
+  "description": "Sync dropbox folders from multiple accounts",
+  "main": "lib/index.js",
+  "bin": {
+    "dropbox-sync": "lib/index.js"
+  },
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*",
+    "bin/**/*"
+  ],
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "jest": {
+    "verbose": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gigony/dropbox-sync-folders-cli.git"
+  },
+  "keywords": [
+    "dropbox",
+    "sync"
+  ],
+  "author": "Gigon Bae",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gigony/dropbox-sync-folders-cli/issues"
+  },
+  "homepage": "https://github.com/gigony/dropbox-sync-folders-cli#readme",
+  "devDependencies": {
+    "@types/clear": "^0.1.0",
+    "@types/dotenv-flow": "^3.0.0",
+    "@types/figlet": "^1.2.0",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.6.2",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.2",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "clear": "^0.1.0",
+    "commander": "^3.0.2",
+    "dotenv-flow": "^3.1.0",
+    "dropbox-sync-folders": "^0.1.5",
+    "figlet": "^1.2.4",
+    "path": "^0.12.7"
+  }
+}
