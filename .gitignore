@@ -65,3 +65,8 @@ typings/
 # Library folder
 /lib
 
+# dropbox-sync configuration
+dropbox-sync.json
+
+# Dropbox downloads
+src/dropbox

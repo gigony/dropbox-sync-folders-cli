@@ -1,11 +1,6 @@
-// import { DropboxSyncFolder } from '../index';
+// import dropbox-sync-folders-cli from '../index';
 
 // jest.setTimeout(600000);
 test('test', () => {
-    expect('a').toBe('a');
+  expect('a').toBe('a');
 });
-
-// import { Greeter } from '../index';
-// test('My Greeter', () => {
-//   expect(Greeter('Gigon')).toBe('Hello Gigon');
-// });
