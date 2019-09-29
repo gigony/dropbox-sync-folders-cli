@@ -60,7 +60,7 @@
     "clear": "^0.1.0",
     "commander": "^3.0.2",
     "dotenv-flow": "^3.1.0",
-    "dropbox-sync-folders": "^0.1.6",
+    "dropbox-sync-folders": "^0.1.7",
     "figlet": "^1.2.4",
     "path": "^0.12.7"
   }
